@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "authors",
+  "collectionName": "teams",
   "info": {
-    "singularName": "author",
-    "pluralName": "authors",
-    "displayName": "author",
-    "description": ""
+    "singularName": "team",
+    "pluralName": "teams",
+    "displayName": "Team"
   },
   "options": {
     "draftAndPublish": true
@@ -15,17 +14,8 @@
     "name": {
       "type": "string"
     },
-    "email": {
-      "type": "email"
-    },
-    "job_title": {
+    "position": {
       "type": "string"
-    },
-    "blog_posts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::blog-post.blog-post",
-      "mappedBy": "authors"
     },
     "image": {
       "allowedTypes": [
@@ -36,6 +26,9 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "bio": {
+      "type": "blocks"
     }
   }
 }
