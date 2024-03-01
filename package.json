@@ -10,6 +10,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@strapi-community/strapi-provider-upload-google-cloud-storage": "^4.10.5",
     "@strapi/plugin-i18n": "4.17.1",
     "@strapi/plugin-users-permissions": "4.17.1",
     "@strapi/provider-upload-cloudinary": "4.17.1",
@@ -21,7 +22,7 @@
     "styled-components": "^5.3.11"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Kenneth Coffie"
   },
   "strapi": {
     "uuid": "35d7a084-3088-4d0b-869e-f503693ee8e5"
