@@ -773,7 +773,7 @@ export interface ApiAuthorAuthor extends Schema.CollectionType {
   info: {
     singularName: 'author';
     pluralName: 'authors';
-    displayName: 'author';
+    displayName: 'Author';
     description: '';
   };
   options: {
@@ -783,12 +783,12 @@ export interface ApiAuthorAuthor extends Schema.CollectionType {
     name: Attribute.String;
     email: Attribute.Email;
     job_title: Attribute.String;
+    image: Attribute.Media;
     blog_posts: Attribute.Relation<
       'api::author.author',
-      'manyToMany',
+      'oneToMany',
       'api::blog-post.blog-post'
     >;
-    image: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -819,14 +819,14 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
+    title: Attribute.String & Attribute.Required;
     description: Attribute.String;
-    body: Attribute.Blocks;
+    body: Attribute.Blocks & Attribute.Required;
     cover_image: Attribute.Media;
     thumbnail: Attribute.Media;
-    authors: Attribute.Relation<
+    author: Attribute.Relation<
       'api::blog-post.blog-post',
-      'manyToMany',
+      'manyToOne',
       'api::author.author'
     >;
     slug: Attribute.String;
@@ -836,6 +836,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
       'manyToMany',
       'api::tag.tag'
     >;
+    cover_image_alt_url: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -923,7 +924,7 @@ export interface ApiTagTag extends Schema.CollectionType {
   info: {
     singularName: 'tag';
     pluralName: 'tags';
-    displayName: 'tag';
+    displayName: 'Tag';
     description: '';
   };
   options: {
