@@ -22,23 +22,11 @@ module.exports = ({ env }) => ({
     config: {
       provider: '@strapi-community/strapi-provider-upload-google-cloud-storage',
       providerOptions: {
-        serviceAccount: {
-          "type": "service_account",
-          "project_id": "togetha",
-          "private_key_id": "6941450618c713c1c40d25aa07ac0f0c52d38101",
-          "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCtngL1JZm8Qr4U\nQvuZPMW5C8AK6KpPMbqd6egHumtLiTiO/JMdQRiS/m/fYX1Q6QzKkP0BEoT4Uizh\nb30cNLOY1amwyOKCkWN/AjtcskbsOFLN6nb49a0KnvgnryCWcDVI7f/H3FDqsUq2\ndRQhdtxIJgjcfdBUeQOF0J6xUF3lcnz1PdyG4Av/uo4yWZMa3cbBpRHvH2txV5fH\n4UGKgVPL9pGOy68aVuq7SXjaebLJkuWl2SUlmUUl2lL55r35ROWL2CTSzVehzsMg\nCrHQB8PTyysWYhwR6QqfBZcI+B/U2DhSjFaih1VlMU0shNEUtjrajf1aKcNiPY3j\novMoyBB9AgMBAAECggEAHhyOKcN0NvUib3Qwm+Kw7ket7pZs12BqG/JSFmkMK+Uo\nRJBk2YmNQA1WDNmlOO+6krVz1AhIvKLP+udxvP8c+RBxpmIo+vlJVuFlt02KRHT+\nU41rRgGiGfn5UzSqA72BWF1C5AB/njzSlvOWYrlxOigymD9P7x6v8Dj/FQS5zE31\nocl7lPOzoXdeYPw7VhBSesWdiLNmhpszXRebG9+GgHRHTmk+W/dZS/KKMh+4qz3E\nV+sT53nVmguAxE8o4JmnNe4FfzA7Mk+clO7TTNutzpE7nZewsMMUr9u2zo8+zskx\n1ty0C2mFQV3IKNqqM6QRK87SS/5JjQOxQY1RMnzgkQKBgQDzR1W1OUX+l6B7v5Lc\nhtWwC1NGFLunfEB0jQGZauukoB8IApptJB6bUPZx0lQe8qQS2eu2l8kI8a404HTD\nDM+a5yk0sYgMWbFRQXZS87je69FKyfasd2Cmig2aR/6CDeMSUzZ2E0apj0ZK/qTg\n8GveU3VKpjKxWaA8UmAPLItBSQKBgQC2siZUUMKAJ3OXLPof2imcuqoIKSbZRk0A\nHG937/VOPFJsq3PIU0QpjHMHSYIpAXqg+/sKEcQvGTjV7ktLO3/kgK/8qK5XPXde\nGuhfoirSKXs6oNOSo2DAt7S7YGjP4JxIpY99y+0h1SbCeMPz6yr1Um2dukT8RTGw\nid9QUnOJlQKBgHLbAebuZFJficAC4TZGXkqf/i+/CB15twCPteqVpSzy/9OLTxcq\nD10qqz9vmpGF4tqXkgaBwML9P07tjZKs0LMEYdrj2iRikCmZq2BcerKcSRJzKYeh\nULsvwF5PkSQbpFH5gWPbk+fnobs0X+lm+LZdVqnor1Q1yUXRalKfqBspAoGAEBAF\nsrAPCbluPkJkE1zY/8ChpmoH0l6N8o6NdlwQkzpWfNtuKJS5j3Wbv25FFVnd8D13\nSuFZAFMVXim/UPQAQJTX5DzoZx8uWYXAHHhjj2q6PONa9q+KmCcOqtLFJFG5K+Hy\nhbriNHFLIRoBEHcCpeMDZDS2T/+9aKoWijdVlSkCgYBcd+iUsxkEvR+EZxvZQirH\npPkFAPmmy4CMqNzOqsaAmOb5T/RN9r82REzH3c64iG6ejRKdtQwiiApNOqPjlPjx\nozGzP9EpCSfVpQ/4TVSbvwQ23/isuHlwXicyg8r4wucFG9NTh51qbaD1Tn+Y8im8\neMhNZw1tqrwsON+vEnDbSg==\n-----END PRIVATE KEY-----\n",
-          "client_email": "togetha@togetha.iam.gserviceaccount.com",
-          "client_id": "109146273763809974103",
-          "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-          "token_uri": "https://oauth2.googleapis.com/token",
-          "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-          "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/togetha%40togetha.iam.gserviceaccount.com",
-          "universe_domain": "googleapis.com"
-        },
-        "bucketName": "strapi-togetha",
-        "publicFiles": true,
-        "uniform": false,
-        "baseUrl": ""
+        // serviceAccount: env.json('GCS_SERVICE_ACCOUNT'),
+        bucketName: "strapi-togetha",
+        publicFiles: true,
+        uniform: false,
+        baseUrl: ""
 
       },
 
