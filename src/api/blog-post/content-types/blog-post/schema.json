@@ -51,9 +51,6 @@
       "target": "api::author.author",
       "inversedBy": "blog_posts"
     },
-    "slug": {
-      "type": "string"
-    },
     "summary": {
       "type": "text"
     },
@@ -65,6 +62,10 @@
     },
     "cover_image_alt_url": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
