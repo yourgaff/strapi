@@ -829,7 +829,6 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
       'manyToOne',
       'api::author.author'
     >;
-    slug: Attribute.String;
     summary: Attribute.Text;
     tags: Attribute.Relation<
       'api::blog-post.blog-post',
@@ -837,6 +836,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
       'api::tag.tag'
     >;
     cover_image_alt_url: Attribute.String;
+    slug: Attribute.UID<'api::blog-post.blog-post', 'title'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
